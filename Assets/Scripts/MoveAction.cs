@@ -54,7 +54,7 @@ public class MoveAction : MonoBehaviour
         GridPosition unitGridPosition = unit.GetGridPosition();
         for (int x = -maxMoveDistance; x <= maxMoveDistance; x++)
         {
-            for (int z = -maxMoveDistance; z < maxMoveDistance; z++)
+            for (int z = -maxMoveDistance; z <= maxMoveDistance; z++)
             {
                 GridPosition offsetGridPosition = new GridPosition(x, z);
                 GridPosition testGridPosition = unitGridPosition + offsetGridPosition;
