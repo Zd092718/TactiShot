@@ -83,6 +83,12 @@ PrefabInstance:
       propertyPath: health
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8372412728624818275, guid: 3f8ee7fe9d281674fb43f95f1ccd1085,
+        type: 3}
+      propertyPath: ragdollPrefab
+      value: 
+      objectReference: {fileID: 8999337334549840463, guid: 67a04a71ecfb31d4f96980439eb7737b,
+        type: 3}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f8ee7fe9d281674fb43f95f1ccd1085, type: 3}
