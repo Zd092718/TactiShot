@@ -116,6 +116,7 @@ public class Unit : MonoBehaviour
     }
     private void HealthSystem_OnDead(object sender, EventArgs e)
     {
+        LevelGrid.Instance.RemoveUnitAtGridPosition(gridPosition, this);
         Destroy(gameObject);
     }
 
@@ -126,7 +127,6 @@ public class Unit : MonoBehaviour
 
     public void Damage(int damageAmount)
     {
-        LevelGrid.Instance.RemoveUnitAtGridPosition(gridPosition, this);
         healthSystem.TakeDamage(damageAmount);
     }
 
