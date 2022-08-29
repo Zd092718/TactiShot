@@ -31,6 +31,10 @@ public class UnitActionSystem : MonoBehaviour
     }
     private void Start()
     {
+        if (selectedUnit == null)
+        {
+            return;
+        }
         SetSelectedUnit(selectedUnit);
     }
     private void Update()
@@ -100,6 +104,7 @@ public class UnitActionSystem : MonoBehaviour
                     {
                         return false;
                     }
+
                     SetSelectedUnit(unit);
                     return true;
                 };

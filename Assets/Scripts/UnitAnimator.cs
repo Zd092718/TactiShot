@@ -26,11 +26,19 @@ public class UnitAnimator : MonoBehaviour
 
     private void MoveAction_OnStopMoving(object sender, EventArgs e)
     {
+        if (anim == null)
+        {
+            return;
+        }
         anim.SetBool("IsMoving", false);
     }
 
     private void MoveAction_OnStartMoving(object sender, EventArgs e)
     {
+        if (anim == null)
+        {
+            return;
+        }
         anim.SetBool("IsMoving", true);
     }
     private void ShootAction_OnShoot(object sender, ShootAction.OnShootEventArgs e)
