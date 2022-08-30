@@ -34,7 +34,7 @@ public class Testing : MonoBehaviour
             //         10f
             //     );
             // }
-
+            ScreenShake.Instance.Shake(5f);
         }
     }
 }
