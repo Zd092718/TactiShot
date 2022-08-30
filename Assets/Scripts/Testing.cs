@@ -20,6 +20,11 @@ public class Testing : MonoBehaviour
 
             List<GridPosition> gridPositionList = Pathfinding.Instance.FindPath(startGridPostion, mouseGridPosition);
 
+            if (gridPositionList == null)
+            {
+                return;
+            }
+
             for (int i = 0; i < gridPositionList.Count - 1; i++)
             {
                 Debug.DrawLine(
