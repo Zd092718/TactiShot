@@ -13,7 +13,6 @@ public class UnitActionSystem : MonoBehaviour
     public event EventHandler<bool> OnBusyChanged;
     public event EventHandler OnActionStarted;
 
-    [SerializeField] private Transform playerUnitParent;
     [SerializeField] private Unit selectedUnit;
     [SerializeField] private LayerMask unitLayerMask;
 
@@ -32,22 +31,11 @@ public class UnitActionSystem : MonoBehaviour
     }
     private void Start()
     {
-        foreach (Unit child in playerUnitParent.GetComponentsInChildren<Unit>())
+        if (selectedUnit == null)
         {
-            if (child == null)
-            {
-                return;
-            }
-            SetSelectedUnit(child);
+            return;
         }
-        // if (selectedUnit != null)
-        // {
-        //     SetSelectedUnit(selectedUnit);
-        // }
-        // else
-        // {
-        //     return;
-        // }
+        SetSelectedUnit(selectedUnit);
     }
     private void Update()
     {
@@ -116,6 +104,7 @@ public class UnitActionSystem : MonoBehaviour
                     {
                         return false;
                     }
+
                     SetSelectedUnit(unit);
                     return true;
                 };
